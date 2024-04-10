@@ -35,7 +35,7 @@ const SmoothieCard = ({ smoothie, onDelete }: SmoothieCardProps) => {
     <div className="smoothie-card w-full box-border relative p-2.5 rounded-md bg-white min-h-40">
       <h3 className="font-bold mb-4">{smoothie.title}</h3>
       <p>{smoothie.method}</p>
-      <div className="rating absolute text-white w-10 h-0 leading-[0px] text-center px-0 py-5 rounded-md -right-2.5 -top-2.5 bg-purple-800">
+      <div className="rating absolute text-white w-10 h-0 leading-[0px] text-center px-0 py-5 rounded-md -right-2.5 -top-2.5 bg-[#12bca2]">
         {smoothie.rating}
       </div>
       <div className="buttons absolute bottom-2.5 right-2.5">
