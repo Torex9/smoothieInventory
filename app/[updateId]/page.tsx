@@ -15,8 +15,6 @@ export default function Update({ params }: { params: { updateId: string } }) {
   const urlID = params.updateId;
 
   const handleSubmit = async (e: any) => {
-    e.preventDefault();
-
     if (!title || !method || !rating) {
       setFormError("Please fill in all fields correctly");
       return;
