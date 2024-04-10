@@ -61,7 +61,6 @@ export default function Home() {
             >
               Rating
             </button>
-            {orderBy}
           </div>
           <div className="smoothies-grid grid grid-cols-[1fr_1fr_1fr] gap-10 mt-10">
             {smoothies.map((smoothie) => (
