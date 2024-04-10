@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import supabase from "@/database/superbaseClient";
 import { useRouter } from "next/navigation";
-import { Replace } from "lucide-react";
 
 export default function Update({ params }: { params: { updateId: string } }) {
   const router = useRouter();
