@@ -9,19 +9,21 @@ export default function Create() {
   const [title, setTitle] = useState("");
   const [method, setMethod] = useState("");
   const [rating, setRating] = useState("");
+  const [customerName, setCustomerName] = useState("");
+  const [emails, setEmails] = useState("");
   const [formError, setFormError] = useState<string | null>(null);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    if (!title || !method || !rating) {
+    if (!title || !method || !rating || !customerName || !emails) {
       setFormError("Please fill in all fields correctly");
       return;
     }
 
     const { data, error } = await supabase
       .from("smoothies")
-      .insert([{ title, method, rating }])
+      .insert([{ title, method, rating, customerName, emails }])
       .select();
 
     if (error) {
@@ -42,6 +44,24 @@ export default function Create() {
         onSubmit={handleSubmit}
         className="max-w-[480px] mx-auto my-0 p-5 rounded-md bg-white"
       >
+        <label htmlFor="customerName">Customer Name:</label>
+        <input
+          type="text"
+          id="customerName"
+          value={customerName}
+          onChange={(e) => setCustomerName(e.target.value)}
+          className="block w-full box-border border mt-2.5 mb-5 mx-0 p-1.5 border-solid border-[#ccc]"
+        />
+
+        <label htmlFor="emails">Email:</label>
+        <input
+          type="text"
+          id="emails"
+          value={emails}
+          onChange={(e) => setEmails(e.target.value)}
+          className="block w-full box-border border mt-2.5 mb-5 mx-0 p-1.5 border-solid border-[#ccc]"
+        />
+
         <label htmlFor="title">Title:</label>
         <input
           type="text"
