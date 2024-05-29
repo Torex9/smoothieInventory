@@ -58,7 +58,7 @@ const SmoothieCard = ({ smoothie, onDelete }: SmoothieCardProps) => {
 
       <div className=" flex justify-center">
         <button
-          className="bg-[#12bca2] p-2 rounded-lg"
+          className="bg-[#12bca2] p-2 rounded-lg hover:bg-[#1aff70]"
           onClick={handleSendEmail}
         >
           Send Email

@@ -59,7 +59,7 @@ export default function Update({ params }: { params: { updateId: string } }) {
     };
 
     fetchSmoothie();
-  }, [params.updateId, router]);
+  }, [router, urlID]);
   return (
     <div className="page">
       <form
